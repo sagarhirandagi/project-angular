@@ -1,0 +1,20 @@
+<h2> Department List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Department Name</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let department of departments" >
+            <td> {{ department.deptName }} </td>
+            
+            <td>
+                <button (click) = "updateDepartment(department.deptId)" class = "btn btn-secondary btn-outline-info"> Update</button>
+                <button (click) = "deleteDepartment(department.deptId)" class = "btn btn-danger btn-outline-info" style="margin-left: 10px"> Delete</button>
+                <button (click) = "departmentDetails(department.deptId)" class = "btn  btn-outline-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
